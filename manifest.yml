@@ -1,0 +1,21 @@
+modules:
+  jira:issuePanel:
+    - key: apibutton-hello-world-panel
+      function: main
+      title: API
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: main
+      handler: index.run
+permissions:
+  scopes:
+    - 'read:jira-work'
+    - 'write:jira-work'
+  external:
+    fetch:
+      backend:
+        - '*'
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/190f11fb-f72c-4593-a4fb-abdc5a2bc9c5
